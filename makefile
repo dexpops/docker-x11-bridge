@@ -7,7 +7,7 @@ run:
 	 -e MODE="tcp" \
 	 -e XPRA_HTML="yes" \
 	 -e XPRA_MMAP="yes" \
-	 -e DISPLAY=:14 \
+	 -e DISPLAY=":14" \
 	 -p 10000:10000 \
 	 dexpops/docker-x11-bridge:latest
 

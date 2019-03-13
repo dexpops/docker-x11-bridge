@@ -4,53 +4,54 @@ TMPDIR=/tmp/spacemacs-mmap
 echo "
 Starting with:
 xpra $XPRA_MODE $DISPLAY
---auth=env
---bind-tcp=0.0.0.0:${XPRA_TCP_PORT}
---compress=${XPRA_COMPRESS}
---dpi=${XPRA_DPI}
---encoding=${XPRA_ENCODING}
---html=${XPRA_HTML}
---mmap=${XPRA_MMAP}
---keyboard-sync=${XPRA_KEYBOARD_SYNC}
---sharing=no\
---speaker=disabled\
---microphone=disabled\
---webcam=no\
---no-daemon
---printing=no
---pulseaudio=no
---readonly=${XPRA_READONLY}
---start='$@'
---file-transfer=${XPRA_FILE_TRANSFER}
---open-files=${XPRA_OPEN_FILES}
---desktop-scaling=${XPRA_DESKTOP_SCALING}
---tray=${XPRA_TRAY}
---system-tray=${XPRA_SYSTEM_TRAY}
---clipboard=${XPRA_CLIPBOARD}
+ --file-transfer=${XPRA_FILE_TRANSFER}\
+ --open-files=${XPRA_OPEN_FILES}\
+ --desktop-scaling=${XPRA_DESKTOP_SCALING}\
+ --tray=${XPRA_TRAY}\
+ --system-tray=${XPRA_SYSTEM_TRAY}\
+ --clipboard=${XPRA_CLIPBOARD}\
+ --auth=env\
+ --bind-tcp=0.0.0.0:${XPRA_TCP_PORT}\
+ --compress=${XPRA_COMPRESS}\
+ --dpi=${XPRA_DPI}\
+ --encoding=${XPRA_ENCODING}\
+ --html=${XPRA_HTML}\
+ --mmap=${XPRA_MMAP}\
+ --keyboard-sync=${XPRA_KEYBOARD_SYNC}\
+ --microphone=no\
+ --no-daemon\
+ --printing=no\
+ --pulseaudio=no\
+ --readonly=${XPRA_READONLY}\
+ --sharing=no\
+ --speaker=disabled\
+ --microphone=disabled\
+ --webcam=no\
+ --start="$@"
 "
 
 xpra $XPRA_MODE $DISPLAY\
-  --auth=env\
-  --bind-tcp=0.0.0.0:${XPRA_TCP_PORT}\
-  --compress=${XPRA_COMPRESS}\
-  --dpi=${XPRA_DPI}\
-  --encoding=${XPRA_ENCODING}\
-  --html=${XPRA_HTML}\
-  --mmap=${XPRA_MMAP}\
-  --keyboard-sync=${XPRA_KEYBOARD_SYNC}\
-  --microphone=no\
-  --no-daemon\
-  --printing=no\
-  --pulseaudio=no\
-  --readonly=${XPRA_READONLY}\
-  --sharing=no\
-  --speaker=disabled\
-  --microphone=disabled\
-  --webcam=no\
-  --start="$@"\
-  --file-transfer=${XPRA_FILE_TRANSFER}\
-  --open-files=${XPRA_OPEN_FILES}\
-  --desktop-scaling=${XPRA_DESKTOP_SCALING}\
-  --tray=${XPRA_TRAY}\
-  --system-tray=${XPRA_SYSTEM_TRAY}\
-  --clipboard=${XPRA_CLIPBOARD}
+ --file-transfer=${XPRA_FILE_TRANSFER}\
+ --open-files=${XPRA_OPEN_FILES}\
+ --desktop-scaling=${XPRA_DESKTOP_SCALING}\
+ --tray=${XPRA_TRAY}\
+ --system-tray=${XPRA_SYSTEM_TRAY}\
+ --clipboard=${XPRA_CLIPBOARD}\
+ --auth=env\
+ --bind-tcp=0.0.0.0:${XPRA_TCP_PORT}\
+ --compress=${XPRA_COMPRESS}\
+ --dpi=${XPRA_DPI}\
+ --encoding=${XPRA_ENCODING}\
+ --html=${XPRA_HTML}\
+ --mmap=${XPRA_MMAP}\
+ --keyboard-sync=${XPRA_KEYBOARD_SYNC}\
+ --microphone=no\
+ --no-daemon\
+ --printing=no\
+ --pulseaudio=no\
+ --readonly=${XPRA_READONLY}\
+ --sharing=no\
+ --speaker=disabled\
+ --microphone=disabled\
+ --webcam=no\
+ --start="$@"
