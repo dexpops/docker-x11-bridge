@@ -12,15 +12,15 @@ xpra $XPRA_MODE $DISPLAY
 --html=${XPRA_HTML}
 --mmap=${XPRA_MMAP}
 --keyboard-sync=${XPRA_KEYBOARD_SYNC}
---microphone=no
+--sharing=no\
+--speaker=disabled\
+--microphone=disabled\
+--webcam=no\
 --no-daemon
 --printing=no
 --pulseaudio=no
 --readonly=${XPRA_READONLY}
---sharing=${XPRA_SHARING}
---speaker=disabled
 --start='$@'
---webcam=${XPRA_WEBCAM}
 --file-transfer=${XPRA_FILE_TRANSFER}
 --open-files=${XPRA_OPEN_FILES}
 --desktop-scaling=${XPRA_DESKTOP_SCALING}
@@ -43,10 +43,11 @@ xpra $XPRA_MODE $DISPLAY\
   --printing=no\
   --pulseaudio=no\
   --readonly=${XPRA_READONLY}\
-  --sharing=${XPRA_SHARING}\
+  --sharing=no\
   --speaker=disabled\
-  --start="$@"
-  --webcam=${XPRA_WEBCAM}\
+  --microphone=disabled\
+  --webcam=no\
+  --start="$@"\
   --file-transfer=${XPRA_FILE_TRANSFER}\
   --open-files=${XPRA_OPEN_FILES}\
   --desktop-scaling=${XPRA_DESKTOP_SCALING}\
