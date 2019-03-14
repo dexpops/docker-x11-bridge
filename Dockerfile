@@ -160,15 +160,7 @@ RUN echo "http://nl.alpinelinux.org/alpine/edge/testing" \
 # Cleanup
     && apk del build-deps \
     && rm -rf /var/cache/* /tmp/* /var/log/* ~/.cache \
-    && mkdir -p /var/cache/apk \
-# SSH
-    && mkdir -p /var/run/sshd \
-    && chmod 0755 /var/run/sshd \
-    && rc-update add sshd \
-    && rc-status \
-    && touch /run/openrc/softlevel \
-    && /etc/init.d/sshd start > /dev/null 2>&1 \
-    && /etc/init.d/sshd stop > /dev/null 2>&1
+    && mkdir -p /var/cache/apk
 
 # docker run ... --volumes-from <ME> -e DISPLAY=<MY_DISPLAY> ... firefox
 VOLUME /tmp/.X11-unix
@@ -177,6 +169,7 @@ VOLUME /tmp/.X11-unix
 VOLUME /etc/pub-keys
 
 COPY bin/* /usr/local/bin/
+COPY html/* /usr/share/xpra/www/
 
 ENV DISPLAY=":14"             \
     SHELL="/bin/bash"         \
